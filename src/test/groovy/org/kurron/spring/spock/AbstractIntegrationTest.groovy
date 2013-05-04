@@ -7,7 +7,7 @@ import spock.lang.Specification
 /**
  * Base class for Spock-based integration tests.
  */
-@ContextConfiguration( "classpath:/org/kurron/spring/spock/AbstractIntegrationTest-context.xml" )
+@ContextConfiguration( classes = AbstractIntegrationTestConfiguration.class )
 abstract class AbstractIntegrationTest extends Specification {
 
     @Autowired

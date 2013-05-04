@@ -6,7 +6,7 @@ import org.springframework.test.context.ContextConfiguration
 /**
  * Basic integration test.
  */
-@ContextConfiguration( "classpath:/org/kurron/spring/spock/SimpleIntegrationTest-context.xml" )
+@ContextConfiguration( classes = SimpleIntegrationTestConfiguration.class  )
 class SimpleIntegrationTest extends AbstractIntegrationTest {
 
     @Autowired

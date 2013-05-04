@@ -23,7 +23,7 @@ class WorkerIntegrationTest extends AbstractIntegrationTest {
         assert sut != null
 
         when:
-        String results = sut.doWork( generator.nextInt( 10000 ) )
+        String results = sut.doWork( generator.nextInt( 1000 ) )
 
         then:
         logger.debug( 'results = {}', results )

@@ -28,6 +28,8 @@ configurations {
 dependencies {
     compile module( "org.codehaus.groovy:groovy-all:${groovyVersion}:indy" )
     compile "org.springframework:spring-context:${springFrameworkVersion}"
+    compile "org.springframework:spring-aop:${springFrameworkVersion}"
+    compile "org.springframework:spring-aspects:${springFrameworkVersion}"
     compile "org.slf4j:slf4j-api:${slf4jVersion}"
     compile "org.slf4j:slf4j-ext:${slf4jVersion}"
 

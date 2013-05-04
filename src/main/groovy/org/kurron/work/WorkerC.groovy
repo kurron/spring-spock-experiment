@@ -11,6 +11,7 @@ class WorkerC implements Worker {
 
     private final Worker delegate
 
+
     WorkerC(Worker delegate) {
         this.delegate = delegate
     }
@@ -18,6 +19,8 @@ class WorkerC implements Worker {
     @Override
     String doWork(int delay) {
         logger.debug( 'Waiting for {} milliseconds.', delay )
-        return delegate.doWork( delay )
+        Thread.sleep( delay )
+        String results = delegate.doWork(delay)
+        return results
     }
 }

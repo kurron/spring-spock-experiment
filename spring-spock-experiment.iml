@@ -32,6 +32,9 @@
     <orderEntry type="library" exported="" scope="RUNTIME" name="logback-core-1.0.12" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="jcl-over-slf4j-1.7.5" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="log4j-over-slf4j-1.7.5" level="project" />
+    <orderEntry type="library" exported="" name="spring-context-support-3.2.2.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="aspectjweaver-1.7.2" level="project" />
+    <orderEntry type="library" exported="" name="spring-aspects-3.2.2.RELEASE" level="project" />
   </component>
 </module>
 

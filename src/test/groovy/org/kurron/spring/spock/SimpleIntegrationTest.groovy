@@ -5,7 +5,7 @@ import spock.lang.Specification
 /**
  * Basic integration test.
  */
-class SimpleIntegrationTest extends Specification {
+class SimpleIntegrationTest extends AbstractIntegrationTest {
 
     def 'bob'() {
         given:

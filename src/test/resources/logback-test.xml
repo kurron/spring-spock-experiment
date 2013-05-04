@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property name="MESSAGE_FORMAT"
-              value="%.-1level %35.35logger{0} %message %throwable{short}%n"/>
+              value="%5.5relative %.-1level %35.35logger{0} %message %throwable{short}%n"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>

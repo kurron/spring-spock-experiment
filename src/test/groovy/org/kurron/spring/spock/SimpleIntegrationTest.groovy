@@ -1,10 +1,11 @@
 package org.kurron.spring.spock
 
-import spock.lang.Specification
+import org.springframework.test.context.ContextConfiguration
 
 /**
  * Basic integration test.
  */
+@ContextConfiguration( "classpath:/org/kurron/spring/spock/SimpleIntegrationTest-context.xml" )
 class SimpleIntegrationTest extends AbstractIntegrationTest {
 
     def 'bob'() {

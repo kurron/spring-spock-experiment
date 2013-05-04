@@ -1,0 +1,47 @@
+apply plugin: 'groovy'
+apply plugin: 'project-report'
+
+ext {
+    springFrameworkVersion = '3.2.2.RELEASE'
+    slf4jVersion = '1.7.2'
+    logbackVersion = '1.0.7'
+    junitVersion = '4.11'
+    hamcrestVersion =  '1.3'
+    spockVersion =  '0.7-groovy-2.0'
+    groovyVersion = '2.1.3'
+}
+
+defaultTasks 'clean', 'projectReport', 'build'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repo.springsource.org/libs-release"
+    }
+}
+
+configurations {
+    all*.exclude group: 'commons-logging'
+    all*.exclude module: 'log4j'
+}
+
+dependencies {
+    compile module( "org.codehaus.groovy:groovy-all:${groovyVersion}:indy" )
+    compile "org.springframework:spring-context:${springFrameworkVersion}"
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-ext:${slf4jVersion}"
+
+    testCompile "org.springframework:spring-test:${springFrameworkVersion}"
+    testCompile "org.spockframework:spock-core:${spockVersion}"
+    testCompile "org.spockframework:spock-spring:${spockVersion}"
+    testCompile "junit:junit-dep:${junitVersion}"
+    testCompile "org.hamcrest:hamcrest-all:${hamcrestVersion}"
+
+    runtime "org.slf4j:jcl-over-slf4j:${slf4jVersion}"
+    runtime "org.slf4j:jul-to-slf4j:${slf4jVersion}"
+    runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
+    runtime "ch.qos.logback:logback-classic:${logbackVersion}"
+    runtime "ch.qos.logback:logback-core:${logbackVersion}"
+}
+
+
